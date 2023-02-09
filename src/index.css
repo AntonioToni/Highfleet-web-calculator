@@ -1,19 +1,10 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
   color-scheme: dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242422;
-  opacity: 1;
-  background-image: radial-gradient(#686868 0.25px, #2d2d2d 0.25px);
+  background-color: #222222;
+  background-image: radial-gradient(#686868 0.25px, #222222 0.25px);
   background-size: 3px 3px;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+body  {
+  margin: 0;
 }
