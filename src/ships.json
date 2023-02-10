@@ -1,0 +1,20 @@
+[{
+  "shipName" : "Sevastopol",
+  "cruiseSpeed" : 109,
+  "consumption" : 2217
+},
+{
+  "shipName" : "Negev",
+  "cruiseSpeed" : 110,
+  "constumption" : 876
+},
+{
+  "shipName" : "Nomad",
+  "cruiseSpeed" : 129,
+  "constumption" : 1441
+},
+{
+  "shipName" : "Lightning",
+  "cruiseSpeed" : 445,
+  "constumption" : 268
+}]
