@@ -23,6 +23,7 @@ export function IO() {
               id="selectShip"
               labelId="selectShip"
               label="Ship"
+              onChange={handleChange}
               >
               <MenuItem value={'Sevastopol'}>Sevastopol</MenuItem>
               <MenuItem value={'Negev'}>Negev</MenuItem>
