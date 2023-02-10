@@ -6,15 +6,15 @@
 {
   "shipName" : "Negev",
   "cruiseSpeed" : 110,
-  "constumption" : 876
+  "consumption" : 876
 },
 {
   "shipName" : "Nomad",
   "cruiseSpeed" : 129,
-  "constumption" : 1441
+  "consumption" : 1441
 },
 {
   "shipName" : "Lightning",
   "cruiseSpeed" : 445,
-  "constumption" : 268
+  "consumption" : 268
 }]
