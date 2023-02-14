@@ -17,4 +17,9 @@
   "shipName" : "Lightning",
   "cruiseSpeed" : 445,
   "consumption" : 268
+},
+{
+  "shipName" : "Archangel",
+  "cruiseSpeed" : 190,
+  "consumption" : 1105
 }]

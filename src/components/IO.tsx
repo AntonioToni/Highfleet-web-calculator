@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
 import { MenuItem, Select, Stack, TextField, InputLabel, FormControl, Typography } from '@mui/material';
-import Sevastopol from '../assets/Sevastopol.png';
-import Negev from '../assets/Negev.png';
-import Nomad from '../assets/Nomad.png';
-import Lightning from '../assets/Lightning.png';
 import shipList from '../ships.json';
 import { getPrice, getTotalFuel } from '../services/functions';
 
 export function IO () {
 	const [ship, setShip] = useState(0);
 	const [distance, setDistance] = useState(0);
-	console.log('Test');
+
 	return (
 		<>
 			<Stack spacing={1} alignItems='center' justifyContent='center'
@@ -37,6 +33,7 @@ export function IO () {
 							<MenuItem value={1}>Negev</MenuItem>
 							<MenuItem value={2}>Nomad</MenuItem>
 							<MenuItem value={3}>Lightning</MenuItem>
+							<MenuItem value={4}>Archangel</MenuItem>
 						</Select>
 					</FormControl>
 					<TextField
@@ -53,13 +50,7 @@ export function IO () {
 						width: 'inherit'
 					}
 				}}>
-					<img src={
-						ship === 0
-							? Sevastopol
-							: ship === 1
-								? Negev
-								: ship === 2 ? Nomad : Lightning
-					} alt='' draggable='false' style={{ width: 'inherit' }}/>
+					<img src={`/${shipList[ship].shipName}.png`} alt='' draggable='false' style={{ width: 'inherit' }}/>
 				</Stack>
 			</Stack>
 		</>
