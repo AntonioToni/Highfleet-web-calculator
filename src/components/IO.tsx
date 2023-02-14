@@ -13,7 +13,7 @@ export function IO () {
 	console.log('Test');
 	return (
 		<>
-			<Stack spacing={4} alignItems='center' justifyContent='center'
+			<Stack spacing={1} alignItems='center' justifyContent='center'
 				sx={{
 					direction: 'row',
 					textAlign: 'center',
