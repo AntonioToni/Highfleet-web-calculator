@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { MenuItem, Select, Stack, TextField, InputLabel, FormControl, Typography } from '@mui/material';
 import shipList from '../ships.json';
-import { getPrice, getTotalFuel } from '../services/functions';
+import { getPrice, getTime, getTotalFuel } from '../services/functions';
 
 export function IO () {
 	const [ship, setShip] = useState(0);
 	const [distance, setDistance] = useState(0);
-
+	const [methanePrice, setMethanePrice] = useState(1.078);
 	return (
 		<>
 			<Stack spacing={1} alignItems='center' justifyContent='center'
@@ -17,9 +17,9 @@ export function IO () {
 						width: '90vw'
 					}
 				}}>
-				<Stack spacing={2}>
-					<FormControl>
-						<InputLabel id="selectShip">Ship</InputLabel>
+				<Stack spacing={1.5} alignItems='center'>
+					<FormControl size='small'>
+						<InputLabel id='selectShip'>Ship</InputLabel>
 						<Select
 							sx={{ backgroundColor: 'rgba(40,40,40,0.8)', width: 200, textAlign: 'left' }}
 							placeholder='Ship'
@@ -29,21 +29,38 @@ export function IO () {
 							defaultValue='0'
 							onChange={event => { setShip(parseInt(event.target.value)); }}
 						>
-							<MenuItem value={0}>Sevastopol</MenuItem>
+							<MenuItem value={4}>Archangel</MenuItem>
+							<MenuItem value={3}>Lightning</MenuItem>
 							<MenuItem value={1}>Negev</MenuItem>
 							<MenuItem value={2}>Nomad</MenuItem>
-							<MenuItem value={3}>Lightning</MenuItem>
-							<MenuItem value={4}>Archangel</MenuItem>
+							<MenuItem value={0}>Sevastopol</MenuItem>
 						</Select>
 					</FormControl>
 					<TextField
-						id="outlined-number"
-						label="Distance"
-						type="number"
-						onChange={event => { setDistance(parseInt(event.target.value)); }}
+						id='outlined-number'
+						label='Distance'
+						type='number'
+						size='small'
+						onChange={event => { setDistance(parseFloat(event.target.value)); }}
 						sx={{ backgroundColor: 'rgba(40,40,40,0.8)', width: 200 }}
 					/>
-					<Typography variant='h6'>{!isNaN(distance) ? Math.round(getPrice(getTotalFuel(distance, shipList[ship]?.consumption), 1) * 100) / 100 + '€' : 'Please enter a number'}</Typography>
+					<TextField
+						id='outlined-number'
+						label='Methane price per litre'
+						type='number'
+						size='small'
+						value={methanePrice}
+						onChange={event => { setMethanePrice(parseFloat(event.target.value)); }}
+						sx={{ backgroundColor: 'rgba(40,40,40,0.8)', width: 200 }}
+					/>
+					<Typography variant='h6'>
+						<>
+							{isNaN(distance) && setDistance(0)}
+							It would take {Math.round(getTotalFuel(distance, shipList[ship]?.consumption) * 100) / 100} tonnes of methane, costing&nbsp;
+							{Math.round(getPrice(getTotalFuel(distance, shipList[ship]?.consumption), methanePrice) * 100) / 100 + '€'} <br />
+							Flight time: {Math.round(getTime(distance, shipList[ship]?.cruiseSpeed) * 100) / 100}h
+						</>
+					</Typography>
 				</Stack>
 				<Stack spacing={2} sx={{
 					'@media (max-width: 1200px)': {
