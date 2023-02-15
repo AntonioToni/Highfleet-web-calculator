@@ -1,25 +1,37 @@
-[{
-  "shipName" : "Sevastopol",
-  "cruiseSpeed" : 109,
-  "consumption" : 2217
-},
-{
-  "shipName" : "Negev",
-  "cruiseSpeed" : 110,
-  "consumption" : 876
-},
-{
-  "shipName" : "Nomad",
-  "cruiseSpeed" : 129,
-  "consumption" : 1441
-},
-{
-  "shipName" : "Lightning",
-  "cruiseSpeed" : 445,
-  "consumption" : 268
-},
-{
-  "shipName" : "Archangel",
-  "cruiseSpeed" : 190,
-  "consumption" : 1105
-}]
+[
+  {
+    "shipName" : "Archangel",
+    "cruiseSpeed" : 190,
+    "consumption" : 1105
+  },
+  {
+    "shipName" : "Fearsome",
+    "cruiseSpeed" : 224,
+    "consumption" : 534
+  },
+  {
+    "shipName" : "Gepard",
+    "cruiseSpeed" : 276,
+    "consumption" : 433
+  },
+  {
+    "shipName" : "Lightning",
+    "cruiseSpeed" : 445,
+    "consumption" : 268
+  },
+  {
+    "shipName" : "Negev",
+    "cruiseSpeed" : 110,
+    "consumption" : 876
+  },
+  {
+    "shipName" : "Nomad",
+    "cruiseSpeed" : 129,
+    "consumption" : 1441
+  },
+  {
+    "shipName" : "Sevastopol",
+    "cruiseSpeed" : 109,
+    "consumption" : 2217
+  }
+]

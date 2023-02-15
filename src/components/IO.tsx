@@ -4,12 +4,12 @@ import shipList from '../ships.json';
 import { getPrice, getTime, getTotalFuel } from '../services/functions';
 
 export function IO () {
-	const [ship, setShip] = useState(0);
+	const [ship, setShip] = useState(6);
 	const [distance, setDistance] = useState(0);
 	const [methanePrice, setMethanePrice] = useState(1.078);
 	return (
 		<>
-			<Stack spacing={1} alignItems='center' justifyContent='center'
+			<Stack spacing={0} alignItems='center' justifyContent='center'
 				sx={{
 					direction: 'row',
 					textAlign: 'center',
@@ -17,6 +17,7 @@ export function IO () {
 						width: '90vw'
 					}
 				}}>
+				<Typography variant='caption' sx={{margin : 2, fontWeight: 'bold'}}>I do not own Highfleet nor images used here. <br /> Check out the game on <a href="https://store.steampowered.com/app/1434950/HighFleet/">Steam</a>.</Typography>
 				<Stack spacing={1.5} alignItems='center'>
 					<FormControl size='small'>
 						<InputLabel id='selectShip'>Ship</InputLabel>
@@ -26,14 +27,16 @@ export function IO () {
 							id='selectShip'
 							labelId='selectShip'
 							label='Ship'
-							defaultValue='0'
+							defaultValue='6'
 							onChange={event => { setShip(parseInt(event.target.value)); }}
 						>
-							<MenuItem value={4}>Archangel</MenuItem>
+							<MenuItem value={0}>Archangel</MenuItem>
+							<MenuItem value={1}>Fearsome</MenuItem>
+							<MenuItem value={2}>Gepard</MenuItem>
 							<MenuItem value={3}>Lightning</MenuItem>
-							<MenuItem value={1}>Negev</MenuItem>
-							<MenuItem value={2}>Nomad</MenuItem>
-							<MenuItem value={0}>Sevastopol</MenuItem>
+							<MenuItem value={4}>Negev</MenuItem>
+							<MenuItem value={5}>Nomad</MenuItem>
+							<MenuItem value={6}>Sevastopol</MenuItem>
 						</Select>
 					</FormControl>
 					<TextField
