@@ -60,7 +60,7 @@ export function IO () {
 						<>
 							{isNaN(distance) && setDistance(0)}
 							It would take {Math.round(getTotalFuel(distance, shipList[ship]?.consumption) * 100) / 100} tonnes of methane, costing&nbsp;
-							{Math.round(getPrice(getTotalFuel(distance, shipList[ship]?.consumption), methanePrice) * 100) / 100 + '€'} <br />
+							{Math.round(getPrice(getTotalFuel(distance, shipList[ship]?.consumption), methanePrice) * 100) / 100 + '€'} to fly {distance}km<br />
 							Flight time: {Math.round(getTime(distance, shipList[ship]?.cruiseSpeed) * 100) / 100}h
 						</>
 					</Typography>
