@@ -70,7 +70,7 @@ export function IO () {
 						width: 'inherit'
 					}
 				}}>
-					<img src={`/${shipList[ship].shipName}.png`} alt='' draggable='false' style={{ width: 'inherit' }}/>
+					<img src={`/${shipList[ship].shipName}.png`} alt='' draggable='false' style={{ width: 'inherit', marginTop: '-20px' }}/>
 				</Stack>
 			</Stack>
 		</>
