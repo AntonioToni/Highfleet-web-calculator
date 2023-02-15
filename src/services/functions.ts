@@ -10,3 +10,7 @@ export function getPrice (totalFuel: number, pricePerLitre: number): number {
 export function getTime(distance: number, cruiseSpeed: number): number {
 	return (distance / cruiseSpeed);
 }
+
+export function thousandsSeparator(x: number): string {
+	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}

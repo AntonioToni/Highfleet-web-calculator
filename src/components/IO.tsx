@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MenuItem, Select, Stack, TextField, InputLabel, FormControl, Typography } from '@mui/material';
 import shipList from '../ships.json';
-import { getPrice, getTime, getTotalFuel } from '../services/functions';
+import { getPrice, getTime, getTotalFuel, thousandsSeparator } from '../services/functions';
 
 export function IO () {
 	const [ship, setShip] = useState(6);
@@ -59,8 +59,8 @@ export function IO () {
 					<Typography variant='h6'>
 						<>
 							{isNaN(distance) && setDistance(0)}
-							It would take {Math.round(getTotalFuel(distance, shipList[ship]?.consumption) * 100) / 100} tonnes of methane, costing&nbsp;
-							{Math.round(getPrice(getTotalFuel(distance, shipList[ship]?.consumption), methanePrice) * 100) / 100 + '€'} to fly {distance}km<br />
+							It would take {thousandsSeparator(Math.round(getTotalFuel(distance, shipList[ship]?.consumption) * 100) / 100)} tonnes of methane, <br /> costing&nbsp;
+							{thousandsSeparator(Math.round(getPrice(getTotalFuel(distance, shipList[ship]?.consumption), methanePrice) * 100) / 100) + '€'} <br /> to fly {thousandsSeparator(distance)}km<br />
 							Flight time: {Math.round(getTime(distance, shipList[ship]?.cruiseSpeed) * 100) / 100}h
 						</>
 					</Typography>
