@@ -17,7 +17,7 @@ export function IO () {
 						width: '90vw'
 					}
 				}}>
-				<Typography variant='caption' sx={{margin : 2, fontWeight: 'bold'}}>I do not own Highfleet nor images used here. <br /> Check out the game on <a href="https://store.steampowered.com/app/1434950/HighFleet/">Steam</a>.</Typography>
+				<Typography variant='caption' sx={{margin : "6px 0 18px 0", fontWeight: 'bold'}}>I do not own Highfleet nor images used here. <br /> Check out the game on <a href="https://store.steampowered.com/app/1434950/HighFleet/">Steam</a>.</Typography>
 				<Stack spacing={1.5} alignItems='center'>
 					<FormControl size='small'>
 						<InputLabel id='selectShip'>Ship</InputLabel>
@@ -27,16 +27,18 @@ export function IO () {
 							id='selectShip'
 							labelId='selectShip'
 							label='Ship'
-							defaultValue='6'
+							defaultValue='8'
 							onChange={event => { setShip(parseInt(event.target.value)); }}
 						>
 							<MenuItem value={0}>Archangel</MenuItem>
-							<MenuItem value={1}>Fearsome</MenuItem>
-							<MenuItem value={2}>Gepard</MenuItem>
-							<MenuItem value={3}>Lightning</MenuItem>
-							<MenuItem value={4}>Negev</MenuItem>
-							<MenuItem value={5}>Nomad</MenuItem>
-							<MenuItem value={6}>Sevastopol</MenuItem>
+							<MenuItem value={1}>Ballistic</MenuItem>
+							<MenuItem value={2}>Fearsome</MenuItem>
+							<MenuItem value={3}>Gepard</MenuItem>
+							<MenuItem value={4}>Gladiator</MenuItem>
+							<MenuItem value={5}>Lightning</MenuItem>
+							<MenuItem value={6}>Negev</MenuItem>
+							<MenuItem value={7}>Nomad</MenuItem>
+							<MenuItem value={8}>Sevastopol</MenuItem>
 						</Select>
 					</FormControl>
 					<TextField
@@ -70,7 +72,7 @@ export function IO () {
 						width: 'inherit'
 					}
 				}}>
-					<img src={`/${shipList[ship].shipName}.png`} alt='' draggable='false' style={{ width: 'inherit', marginTop: '-20px' }}/>
+					<img src={`/${shipList[ship].shipName}.png`} alt='' draggable='false' style={{ width: 'inherit', marginTop: '-40px' }}/>
 				</Stack>
 			</Stack>
 		</>

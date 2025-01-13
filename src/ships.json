@@ -5,6 +5,11 @@
     "consumption" : 1105
   },
   {
+    "shipName" : "Ballistic",
+    "cruiseSpeed" : 256,
+    "consumption" : 178
+  },
+  {
     "shipName" : "Fearsome",
     "cruiseSpeed" : 224,
     "consumption" : 534
@@ -13,6 +18,11 @@
     "shipName" : "Gepard",
     "cruiseSpeed" : 276,
     "consumption" : 433
+  },
+  {
+    "shipName" : "Gladiator",
+    "cruiseSpeed" : 256,
+    "consumption" : 469
   },
   {
     "shipName" : "Lightning",
